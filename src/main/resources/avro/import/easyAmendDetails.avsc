@@ -1,0 +1,32 @@
+{
+    "namespace": "za.co.absa.avaf.schema.application",
+    "name": "EasyAmendDetails",
+    "type": "record",
+    "doc": "EasyAmend Details vehicle/asset to be financed",
+    "fields": [
+        {"name": "user", "type": ["null", "string"], "default": null},
+        {"name": "businessReferenceNumber", "type": ["null", "string"], "default": null},
+        {"name": "businessOriginatorReferenceNumber", "type": ["null", "string"], "default": null},
+        {"name": "applicationNumber", "type": ["null", "string"], "default": null},
+        {"name": "scoreVersion", "type": ["null", "string"], "default": null},
+        {"name": "approverNumber", "type": ["null", "string"], "default": null},
+        {"name": "approverName", "type": ["null", "string"], "default": null},
+        {"name": "easyPin", "type": ["null", "string"], "default": null},
+        {"name": "approvedDealerIncentiveCommission", "type": ["null", "string"], "default": null},
+        {"name": "approvedRate", "type": ["null", "string"], "default": null},
+        {"name": "rateType", "type": ["null", "string"], "default": null},
+        {"name": "financedAmount", "type": ["null", "string"], "default": null},
+        {"name": "financedAmountVariancePercentage", "type": ["null", "string"], "default": null},
+        {"name": "term", "type": ["null", "string"], "default": null},
+        {"name": "riskCategory", "type": ["null", "string"], "default": null},
+        {"name": "residualValue", "type": ["null", "string"], "default": null},
+        {"name": "residualValueVariancePercentage", "type": ["null", "string"], "default": null},
+        {"name": "scoreCard", "type": ["null", "string"], "default": null},
+        {"name": "mmCode", "type": ["null", "string"], "default": null},
+        {"name": "requestorID", "type": ["null", "string"], "default": null},
+        {"name": "dealerIncentiveCommissionChanged", "type": "boolean", "default": false},
+        {"name": "rateChanged", "type": "boolean", "default": false},
+        {"name": "error", "type": ["null", "string"], "default": null}
+    ]
+}
+

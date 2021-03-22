@@ -1,0 +1,32 @@
+{
+    "namespace": "za.co.absa.avaf.schema.application",
+    "name": "DebtRepayments",
+    "type": "record",
+    "doc": "Applicant Debt Repayments",
+    "fields": [
+           {"name": "totalDebtRepayments", "type": ["null", "string"], "default": null},
+           {"name": "bondPayment", "type": ["null", "string"], "default": null},
+           {"name": "bondJoint", "type": ["null", "string"], "default": null},
+           {"name": "bondPercentage", "type": ["null", "string"], "default": null},
+           {"name": "personalLoan", "type": ["null", "string"], "default": null},
+           {"name": "creditCard", "type": ["null", "string"], "default": null},
+           {"name": "furnitureAccount", "type": ["null", "string"], "default": null},
+           {"name": "clothingAccount", "type": ["null", "string"], "default": null},
+           {"name": "overdraft", "type": ["null", "string"], "default": null},
+           {"name": "totalVehicleInstallments", "type": ["null", "string"], "default": null},
+           {"name": "existingVehicleAccounts","type": ["null",
+                   {
+                      "type": "array",
+                      "items": ["null", "za.co.absa.avaf.schema.application.ExistingVehicleAccount"],
+                      "default": []
+                   }], "default": null
+           },
+           {"name": "otherFixedDebt","type": ["null",
+                  {
+                     "type": "array",
+                     "items": ["null", "za.co.absa.avaf.schema.application.OtherDebt"],
+                     "default": []
+                  }], "default": null
+          }
+    ]
+}

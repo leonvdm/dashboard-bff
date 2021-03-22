@@ -1,0 +1,15 @@
+{
+    "namespace": "za.co.absa.avaf.schema.application",
+    "name": "Address",
+    "type": "record",
+    "doc": "Common address details",
+    "fields": [
+        {"name": "line1", "type": ["null", "string"], "default": null},
+        {"name": "line2", "type": ["null", "string"], "default": null},
+        {"name": "line3", "type": ["null", "string"], "default": null},
+        {"name": "city", "type": ["null", "string"], "default": null},
+        {"name": "suburb", "type": ["null", "string"], "default": null},
+        {"name": "region", "type": ["null", "string"], "default": null},
+        {"name": "postalCode", "type": ["null", "string"], "default": null}
+    ]
+}

@@ -1,0 +1,106 @@
+{
+    "namespace": "za.co.absa.avaf.schema.application",
+    "name": "FinanceRequest",
+    "type": "record",
+    "doc": "Finance request for application",
+    "fields": [
+        {"name": "financeType", "type": ["null", "string"], "default": null},
+        {"name": "altpayername", "type": ["null", "string"], "default": null},
+        {"name": "altpayerid", "type": ["null", "string"], "default": null},
+        {"name": "initiationFeePaid", "type": ["null", "string"], "default": null},
+        {"name": "salesPersonName", "type": ["null", "string"], "default": null},
+        {"name" : "packageInformation",
+             "type" : ["null", {
+                 "type" : "record",
+                 "name" : "Package",
+                 "fields" : [
+                        {"name": "indicator", "type": ["null", "string"], "default": null},
+                        {"name": "number", "type": ["null", "string"], "default": null}
+                 ]}], "default": null
+        },
+        {"name" : "campaign",
+             "type" : ["null", {
+                 "type" : "record",
+                 "name" : "Campaign",
+                 "fields" : [
+                        {"name": "campaignCode", "type": ["null", "string"], "default": null},
+                        {"name": "campaignDescription", "type": ["null", "string"], "default": null},
+                        {"name": "maxDeferredDays", "type": ["null", "int"], "default": null}
+                 ]}], "default": null
+        },
+        {"name": "structures",
+             "type": ["null",
+             {
+                "type": "array",
+                "items": ["null", "za.co.absa.avaf.schema.application.Structure"],
+                "default": []
+             }], "default": null
+        },
+        {"name" : "financeDetails",
+             "type" : ["null", {
+                 "type" : "record",
+                 "name" : "FinanceDetails",
+                 "fields" : [
+                    {"name": "purchasePrice", "type": "string", "default" : "0.00"},
+                    {"name": "extraMechanicalBreakDownWarranty", "type": "string", "default" : "0.00"},
+                    {"name": "extraExtendedCover", "type": "string", "default" : "0.00"},
+                    {"name": "extraCreditLifeInsurance", "type": "string", "default" : "0.00"},
+                    {"name": "extraLicenseAndRegistration", "type": "string", "default" : "0.00"},
+                    {"name": "extraServiceAndDelivery", "type": "string", "default" : "0.00"},
+                    {"name": "extraOnTheRoadCost", "type": "string", "default" : "0.00"},
+                    {"name": "extraTyreAndRim", "type": "string", "default": "0.00"},
+                    {"name": "extraScratchAndDent", "type": "string", "default": "0.00"},
+                    {"name": "extraFuellingCharges", "type": "string", "default": "0.00"},
+                    {"name": "totalExtras", "type": "string", "default": "0.00"},
+                    {"name": "rateType", "type": ["null", "string"], "default": null},
+                    {"name": "interestRatePreferred",  "type": ["null", "string"], "default": null},
+                    {"name": "periodRepayment", "type": ["null", "string"], "default": null},
+                    {"name": "paymentFrequency", "type": ["null", "string"], "default": null, "doc": "MONTHLY"},
+                    {"name": "residualValue", "type": "string", "default" : "0.00"},
+                    {"name": "depositOrTradeinAmount", "type": "string", "default" : "0.00"},
+                    {"name": "salaryDay", "type": ["null", "string"], "default": null},
+                    {"name": "firstPaymentDate", "type": ["null", "string"], "default": null, "doc": "DateTimeFormatter.BASIC_ISO_DATE e.g. '20111203'"},
+                    {"name": "contractStartDate", "type": ["null", "string"], "default": null, "doc": "DateTimeFormatter.BASIC_ISO_DATE e.g. '20111203'"},
+                    {"name": "statementIndicator", "type": ["null", "string"], "default": null},
+                    {"name": "statementEmail1", "type": ["null", "string"], "default": null},
+                    {"name": "depositPercentage",  "type": ["null", "string"], "default": null}
+             ]}], "default": null
+        },
+       {"name" : "indicatorsAndConsent",
+             "type" : ["null", {
+                 "type" : "record",
+                 "doc": "Preferences [Communication, Consent, Indicators]",
+                 "name" : "IndicatorsAndConsent",
+                 "fields" : [
+                         {"name": "marketingConsent", "type": ["null", "string"], "default": null},
+                         {"name": "marketingPost", "type": ["null", "string"], "default": null},
+                         {"name": "marketingTelephone", "type": ["null", "string"], "default": null},
+                         {"name": "marketingSms", "type": ["null", "string"], "default": null},
+                         {"name": "marketingEmail", "type": ["null", "string"], "default": null},
+                         {"name": "marketingNo", "type": ["null", "string"], "default": null},
+                         {"name": "indicatorSACitizen", "type": ["null", "string"], "default": null},
+                         {"name": "indicatorITCConsent", "type": ["null", "string"], "default": null},
+                         {"name": "incomeValidationConsent", "type": ["null", "string"], "default": null},
+                         {"name": "indicatorProfessionClient", "type": ["null", "string"], "default": null},
+                         {"name": "indicatorExistingAbsaClient", "type": ["null", "string"], "default": null},
+                         {"name": "indicatorAbsaStaffMember", "type": ["null", "string"], "default": null},
+                         {"name": "indicatorInsolvent", "type": ["null", "string"], "default": null},
+                         {"name": "indicatorCarAllowance", "type": ["null", "string"], "default": null},
+                         {"name": "indicatorDebitOrder", "type": ["null", "string"], "default": null},
+                         {"name": "indicatorVatVendor", "type": ["null", "string"], "default": null},
+                         {"name": "indicatorGuarantor", "type": ["null", "string"], "default": null},
+                         {"name": "indicatorShortTermInsurance", "type": ["null", "string"], "default": null},
+                         {"name": "section129Notification", "type": ["null", "string"], "default": null}
+                 ]}], "default": null
+        },
+        {"name": "asset", "type": ["null", "za.co.absa.avaf.schema.application.Asset"], "default": null},
+        {"name": "valueAddedProducts",
+         "type": ["null",
+         {
+            "type": "array",
+            "items": ["null", "za.co.absa.avaf.schema.application.ValueAddedProduct"],
+            "default": []
+         }], "default": null
+        }
+    ]
+}

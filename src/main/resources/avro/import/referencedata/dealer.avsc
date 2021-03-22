@@ -1,0 +1,55 @@
+{
+    "namespace": "za.co.absa.avaf.schema.referencedata",
+    "name": "Dealer",
+    "type": "record",
+    "doc": "Dealer Organisation details",
+    "fields": [
+        {"name": "dealerCode", "type": ["null", "string"], "default": null},
+        {"name": "fspNumber", "type": ["null", "string"], "default": null},
+        {"name": "payoutRisk", "type": ["null", "string"], "default": null},
+        {"name": "dealerIndustry", "type": ["null", "string"], "default": null},
+        {"name": "registeredName", "type": ["null", "string"], "default": null},
+        {"name": "tradingAsName", "type": ["null", "string"], "default": null},
+        {"name": "dicCode", "type": ["null", "string"], "default": null},
+        {"name": "workEmail", "type": ["null", "string"], "default": null},
+        {"name": "telephoneNumber", "type": ["null", "string"], "default": null},
+        {"name": "faxNumber", "type": ["null", "string"], "default": null},
+        {"name": "vatNumber", "type": ["null", "string"], "default": null},
+        {"name": "partnerSegment", "type": ["null", "string"], "default": null},
+        {"name": "approvedDealerIndicator", "type": ["null", "string"], "default": null},
+        {"name": "fordOptionsAllowedIndicator", "type": ["null", "string"], "default": null},
+        {"name": "taxiAllowedIndicator", "type": ["null", "string"], "default": null},
+        {"name": "street1", "type": ["null", "string"], "default": null},
+        {"name": "street2", "type": ["null", "string"], "default": null},
+        {"name": "city1", "type": ["null", "string"], "default": null},
+        {"name": "city2", "type": ["null", "string"], "default": null},
+        {"name": "postalCode", "type": ["null", "string"], "default": null},
+        {"name": "site", "type": ["null", {"type": "record", "name": "Site", "fields": [
+            {"name": "siteCode", "type": ["null", "string"], "default": null},
+            {"name": "siteName", "type": ["null", "string"], "default": null},
+            {"name": "regionName", "type": ["null", "string"], "default": null},
+            {"name": "streetEnglish1", "type": ["null", "string"], "default": null},
+            {"name": "streetEnglish2", "type": ["null", "string"], "default": null},
+            {"name": "streetAfrikaans1", "type": ["null", "string"], "default": null},
+            {"name": "streetAfrikaans2", "type": ["null", "string"], "default": null},
+            {"name": "postalCode", "type": ["null", "string"], "default": null},
+            {"name": "telephoneNumber", "type": ["null", "string"], "default": null}
+            ]}], "default": null},
+        {"name": "company", "type": ["null", {"type": "record", "name": "Company", "fields" : [
+            {"name": "companyCode", "type": ["null", "string"], "default": null},
+            {"name": "companyName", "type": ["null", "string"], "default": null}
+            ]}], "default": null},
+        {"name": "alliance", "type": ["null", {"type": "record", "name": "Alliance", "fields": [
+            {"name": "allianceCode", "type": ["null", "string"], "default": null},
+            {"name": "allianceName", "type": ["null", "string"], "default": null}
+            ]}], "default": null},
+        {"name": "marketer", "type": ["null", {"type": "record", "name": "Marketer", "fields": [
+            {"name": "marketerCode", "type": ["null", "string"], "default": null},
+            {"name": "marketerFirstName", "type": ["null", "string"], "default": null},
+            {"name": "marketerLastName", "type": ["null", "string"], "default": null},
+            {"name": "telephoneNumber", "type": ["null", "string"], "default": null},
+            {"name": "mobileNumber", "type": ["null", "string"], "default": null},
+            {"name": "workEmail", "type": ["null", "string"], "default": null}
+            ]}], "default": null}
+    ]
+}

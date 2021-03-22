@@ -1,0 +1,21 @@
+{
+  "name": "ActionItemResult",
+  "type": "record",
+  "namespace": "za.co.absa.avaf.dealmanagement.schema.domain",
+  "fields" : [
+    {"name": "certified", "type": ["boolean", "null"], "default": false},
+    {"name": "blocked", "type": ["boolean", "null"], "default": false},
+    {"name": "deceased", "type": ["boolean", "null"], "default": false},
+    {"name": "actionType", "type": ["null", "string"], "default": null},
+    {"name": "stage", "type": ["null", "string"], "default": null},
+    {"name": "outcome", "type": ["null", "string"], "default": null},
+    {"name": "feedback", "type": ["null", "string"], "default": null, "doc": "dep"},
+    {"name": "externalFeedback", "type" : ["null", {"type": "array", "items": "string"}], "default": null, "doc": "list of docu"},
+    {"name": "additionalComments", "type": ["null", "string"], "default": null},
+    {"name": "actor", "type": ["null", "za.co.absa.avaf.schema.application.Actor"], "default": null},
+    {"name": "iterableFeedback", "type" : ["null", {"type": "array", "items": "string"}], "default": null, "doc": "free text"},
+    {"name": "conditions", "type" : ["null", {"type": "array", "items": "string"}], "default": null},
+    {"name": "additionalDocuments", "type" : ["null", {"type": "array", "items": "string"}], "default": null},
+    {"name": "counterOfferConditions", "type": ["null", {"type" :"map", "values": ["null", "string"]}], "default": null}
+  ]
+}

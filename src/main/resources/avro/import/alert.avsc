@@ -1,0 +1,12 @@
+{
+    "namespace": "za.co.absa.avaf.schema.deal",
+    "name": "Alert",
+    "type": "record",
+    "doc": "Alert",
+    "fields": [
+        {"name": "fieldName", "type": ["null", "string"], "default": null},
+        {"name": "severity", "type": ["null", "string"], "default": null},
+        {"name": "message", "type": ["null", "string"], "default": null},
+        {"name": "comment", "type": ["null", "string"], "default": null}
+    ]
+}

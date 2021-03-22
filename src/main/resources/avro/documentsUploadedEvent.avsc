@@ -1,0 +1,37 @@
+{
+  "namespace": "za.co.absa.avaf.schema.dealmanagement",
+  "name": "DocumentsUploadedEvent",
+  "type": "record",
+  "doc": "Details pertaining to the document that was uploaded",
+  "fields": [
+    {"name": "businessReferenceNumber", "type": ["null", "string"], "default": null},
+    {"name": "businessOriginatorReferenceNumber", "type": ["null", "string"], "default": null},
+    {"name": "dealerName", "type": ["null", "string"], "default": null},
+    {"name": "documentPackId", "type": ["null", "string"], "default": null},
+    {"name": "documentsReceivedDateTime", "type": ["null", "string"], "default": null, "doc": "DateTimeFormatter.ISO_DATE_TIME e.g. '2011-12-03T10:15:30'"},
+    {"name": "documentsReceived",
+      "type": [
+        "null",
+        {
+          "type": "array",
+          "items": {
+            "name": "SupportingDocument",
+            "type": "record",
+            "namespace": "za.co.absa.avaf.schema.dealmanagement",
+            "fields" : [
+              {"name": "certified", "type": ["boolean", "null"], "default": false},
+              {"name": "validatedStatus", "type": ["null", "string"], "default": null},
+              {"name": "validatedDateTime", "type": ["null", "string"], "default": null, "doc": "DateTimeFormatter.ISO_DATE_TIME e.g. '2011-12-03T10:15:30'"},
+              {"name": "dealMaker", "type": ["null", "string"], "default": null},
+              {"name": "fileKey", "type": ["null", "string"], "default": null},
+              {"name": "fileName", "type": ["null", "string"], "default": null},
+              {"name": "docType", "type": ["null", "string"], "default": null},
+              {"name": "docClassification", "type": ["null", "string"], "default": null},
+              {"name": "metaData", "type": ["null", {"type" :"map", "values": ["null", "string"]}], "default": null}
+            ]
+          }, "default" : null
+        }
+      ]
+    }
+  ]
+}

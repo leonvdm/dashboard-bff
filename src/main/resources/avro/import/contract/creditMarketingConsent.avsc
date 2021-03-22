@@ -1,0 +1,13 @@
+{
+    "namespace": "za.co.absa.avaf.schema.contract",
+    "name": "CreditMarketingConsent",
+    "type": "record",
+    "doc": "Credit Marketing Consent Information",
+    "fields": [
+         {"name": "creditMarketingConsent", "type": ["null", "string"], "default": null},
+         {"name": "creditMarketingPost", "type": ["null", "string"], "default": null},
+         {"name": "creditMarketingTelephone", "type": ["null", "string"], "default": null},
+         {"name": "creditMarketingSms", "type": ["null", "string"], "default": null},
+         {"name": "creditMarketingEmail", "type": ["null", "string"], "default": null}
+    ]
+}

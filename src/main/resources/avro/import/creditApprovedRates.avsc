@@ -1,0 +1,17 @@
+ {
+    "namespace": "za.co.absa.avaf.schema.application",
+    "name": "CreditApprovedRates",
+    "type": "record",
+    "doc": "CreditApprovedRates",
+     "fields" : [
+         {"name": "fixedApprovedRateInstalment", "type": ["null", "string"], "default": null},
+         {"name": "fixedApprovedRateInterimInterest", "type": ["null", "string"], "default": null},
+         {"name": "fixedInterestRateSuggested", "type": ["null", "string"], "default": null},
+         {"name": "linkedApprovedRateInstalment", "type": ["null", "string"], "default": null},
+         {"name": "linkedApprovedRateInterimInterest", "type": ["null", "string"], "default": null},
+         {"name": "linkedInterestRateSuggested", "type": ["null", "string"], "default": null},
+         {"name": "dealerIncentiveCommissionApprovedLinked", "type": ["null", "string"], "default": null},
+         {"name": "dealerIncentiveCommissionApprovedFixed", "type": ["null", "string"], "default": null}
+    ]
+}
+

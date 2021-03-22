@@ -1,0 +1,20 @@
+{
+    "namespace": "za.co.absa.avaf.schema.application",
+    "name": "EmploymentInformation",
+    "type": "record",
+    "doc": "Primary applicant employment details",
+    "fields": [
+          {"name": "companyName", "type": ["null", "string"], "default": null},
+          {"name": "periodAtEmployment", "type": ["null", "string"], "default": null},
+          {"name": "occupationCode", "type": ["null", "string"], "default": null},
+          {"name": "occupationDescription", "type": ["null", "string"], "default": null},
+          {"name": "occupationLevel", "type": ["null", "string"], "default": null},
+          {"name": "occupationStatus", "type": ["null", "string"], "default": null},
+          {"name": "industryType", "type": ["null", "string"], "default": null},
+          {"name": "employeeNumber", "type": ["null", "string"], "default": null},
+          {"name": "employerPhoneNumber", "type": ["null", "string"], "default": null},
+          {"name": "address", "type": ["null", "za.co.absa.avaf.schema.application.Address"], "default": null},
+          {"name": "sectorIndustryCode", "type": ["null", "string"], "default": null},
+          {"name": "companyYearEnd", "type": ["null", "string"], "default": null}
+    ]
+}

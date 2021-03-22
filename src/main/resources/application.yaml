@@ -1,0 +1,68 @@
+server:
+  port: 9009
+
+spring:
+  datasource:
+    url: jdbc:h2:mem:testdb
+#  kafka:
+#    consumer:
+#      bootstrap-servers: localhost:9092
+#      group-id: group-id
+#      auto-offset-reset: earliest
+#      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+#      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+#    producer:
+#      bootstrap-servers: localhost:9092
+#      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+#      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+  h2:
+    console:
+      enabled: true
+
+kafka:
+  properties:
+    schema.registry.url: http://localhost:8081
+    # https://docs.spring.io/spring-kafka/reference/htmlsingle/#error-handling-deserializer
+    spring.deserializer.value.delegate.class: io.confluent.kafka.serializers.KafkaAvroDeserializer
+    # https://docs.confluent.io/5.0.1/schema-registry/docs/serializer-formatter.html#subject-name-strategy
+    value.subject.name.strategy: io.confluent.kafka.serializers.subject.RecordNameStrategy
+  consumer:
+    group-id: bolt-engine
+    key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+    # See spring.kafka.properties.spring.deserializer.value.delegate.class 👆
+    value-deserializer: org.springframework.kafka.support.serializer.ErrorHandlingDeserializer2
+    properties:
+      # Important for deserializing bean method parameter (https://stackoverflow.com/a/52215955/2408961)
+      specific.avro.reader: true
+  listener:
+    missing-topics-fatal: false
+  producer:
+    key-serializer: org.apache.kafka.common.serialization.StringSerializer
+    value-serializer: io.confluent.kafka.serializers.KafkaAvroSerializer
+  streams:
+    application-id: bolt-engine-streams
+    client-id: bolt-engine
+    properties:
+      default.key.serde: org.apache.kafka.common.serialization.Serdes$StringSerde
+      default.value.serde: io.confluent.kafka.streams.serdes.avro.SpecificAvroSerde
+      # Properties like schema.registry.url, bootstrap-servers, etc. are inherited from
+      # the usual consumer/producer Kafka properties
+
+avaf:
+  group-id: dev-avaf-application
+  topic-names:
+    netreveal-task: global.avaf.za.netreveal-task.dev.func
+    application: global.avaf.za.application.dev.func
+    application-numbers: global.avaf.za.application-numbers.dev.func
+    application-submitted: global.avaf.za.application-submitted.dev.func
+    application-amendment: global.avaf.za.application-amendment.dev.func
+    contract: global.avaf.za.contract.dev.func
+    contract-numbers: global.avaf.za.contract-numbers.dev.func
+    contract-accepted: global.avaf.za.contract-accepted.dev.func
+    request-for-contract: global.avaf.za.request-for-contract.dev.func
+    request-for-contract-submitted: global.avaf.za.request-for-contract-submitted.dev.func
+    deal-lifecycle: global.avaf.za.deal-lifecycle.dev.func
+    payout: global.avaf.za.payout.dev.func
+    remittance: global.avaf.za.remittance.dev.func
+    payout-sap-in: global.avaf.za.payout-sap-in.dev.func
+    payout-sap-out: global.avaf.za.payout-sap-out.dev.func

@@ -1,0 +1,42 @@
+[
+    {
+      "namespace": "za.co.absa.avaf.schema.contract",
+      "type": "record",
+      "name": "RequestForContract",
+      "_topic": "global.avaf.za.request-for-contract.dev.func",
+      "fields": [
+        {"name": "businessOriginatorReferenceNumber", "type": ["null", "string"], "default": null},
+        {"name": "businessReferenceNumber", "type": ["null", "string"], "default": null},
+        {"name": "firstPaymentDate", "type": ["null", "string"], "default": null},
+        {"name": "contractStartDate", "type": ["null", "string"], "default": null},
+        {"name": "registrationNumber", "type": ["null", "string"], "default": null},
+        {"name": "chassisNumber", "type": ["null", "string"], "default": null},
+        {"name": "engineNumber", "type": ["null", "string"], "default": null},
+        {"name": "initiationFeePaid", "type": ["null", "string"], "default": null},
+        {"name": "indicatorDebitOrder", "type": ["null", "string"], "default": null},
+        {"name": "currentBankName", "type": ["null", "string"], "default": null},
+        {"name": "currentBankBranch", "type": ["null", "string"], "default": null},
+        {"name": "currentBankAccType", "type": ["null", "string"], "default": null},
+        {"name": "currentBankAccNumber", "type": ["null", "string"], "default": null},
+        {"name": "currentBranchCode", "type": ["null", "string"], "default": null}
+      ]
+    },
+    {
+      "namespace": "za.co.absa.avaf.schema.contract",
+      "type": "record",
+      "name": "RequestForContractSubmitted",
+      "_topic": "global.avaf.za.request-for-contract.dev.func",
+      "fields": [
+        {"name": "dealerCode", "type": ["null", "string"], "default": null},
+        {"name": "receivedDateTime", "aliases": ["classifiedOnDate"], "type": ["null", "string"], "default": null, "doc": "DateTimeFormatter.ISO_DATE_TIME e.g. '2011-12-03T10:15:30'"},
+        {"name": "requestForContract", "type": ["null", "za.co.absa.avaf.schema.contract.RequestForContract"], "default": null},
+        {"name": "validationResults",
+             "type": ["null",
+             {
+               "type": "array", "items": "string", "default": []
+             }], "default": null
+        },
+        {"name": "rawXml", "type": ["null", "string"], "default": null}
+      ]
+    }
+]

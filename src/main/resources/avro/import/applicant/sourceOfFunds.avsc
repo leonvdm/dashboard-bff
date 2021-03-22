@@ -1,0 +1,14 @@
+{
+    "namespace": "za.co.absa.avaf.schema.application",
+    "name": "SourceOfFunds",
+    "type": "record",
+    "doc": "Source of Funds for applicant",
+    "fields": [
+        {"name": "sourceOfIncome", "type": ["null", "string"], "default": null},
+        {"name": "sourceOfFunds1", "type": ["null", "string"], "default": null},
+        {"name": "sourceOfFunds2", "type": ["null", "string"], "default": null},
+        {"name": "sourceOfFunds3", "type": ["null", "string"], "default": null},
+        {"name": "sourceOfFunds4", "type": ["null", "string"], "default": null},
+        {"name": "sourceOfFunds5", "type": ["null", "string"], "default": null}
+    ]
+}

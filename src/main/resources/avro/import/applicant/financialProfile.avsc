@@ -1,0 +1,21 @@
+{
+    "namespace": "za.co.absa.avaf.schema.application",
+    "name": "FinancialProfile",
+    "type": "record",
+    "doc": "applicant / spouse financial profile",
+    "fields": [
+            {"name": "sourceOfFunds", "type": ["null", "za.co.absa.avaf.schema.application.SourceOfFunds"], "default": null},
+            {"name": "disposableIncome", "type": ["null", "string"], "default": null, "doc": "nett - totalDebt - livingExpenses"},
+            {"name": "income", "type": ["null", "za.co.absa.avaf.schema.application.Income"], "default": null},
+            {"name" : "expenses",
+                "type" : ["null", {
+                    "type" : "record",
+                    "name" : "Expenses",
+                    "fields" : [
+                        {"name": "totalExpenses", "type": ["null", "string"], "default": null},
+                        {"name": "debtRepayments", "type": ["null", "za.co.absa.avaf.schema.application.DebtRepayments"], "default": null},
+                        {"name": "livingExpenses", "type": ["null", "za.co.absa.avaf.schema.application.LivingExpenses"], "default": null}
+                    ]}], "default": null
+            }
+    ]
+}

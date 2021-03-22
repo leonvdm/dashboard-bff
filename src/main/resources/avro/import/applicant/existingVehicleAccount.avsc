@@ -1,0 +1,11 @@
+{
+    "namespace": "za.co.absa.avaf.schema.application",
+    "name": "ExistingVehicleAccount",
+    "type": "record",
+    "doc": "existing vehicles",
+    "fields": [
+        {"name": "instalment", "type": ["null", "string"], "default": null},
+        {"name": "settle", "type": ["null", "string"], "default": null},
+        {"name": "existingAccNum", "type": ["null", "string"], "default": null}
+    ]
+}

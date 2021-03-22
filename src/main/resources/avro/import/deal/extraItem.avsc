@@ -1,0 +1,12 @@
+{
+    "namespace": "za.co.absa.avaf.schema.application",
+    "name": "ExtraItem",
+    "type": "record",
+    "doc": "Extra items add to asset, e.g. rubberise, sunroof, canopy, etc.",
+    "fields": [
+        {"name": "code", "type": ["null", "string"], "default": null},
+        {"name": "description", "type": ["null", "string"], "default": null},
+        {"name": "vatable", "type": ["null", "boolean"], "default": null},
+        {"name": "price", "type": ["null", "string"], "default": null}
+    ]
+}

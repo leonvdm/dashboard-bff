@@ -1,0 +1,12 @@
+{
+  "namespace": "za.co.absa.avaf.schema.application",
+  "name": "DealAttributes",
+  "type": "record",
+  "fields" : [
+    {"name": "options", "type": ["boolean", "null"], "default": false},
+    {"name": "packages", "type": ["boolean", "null"], "default": false},
+    {"name": "taxi", "type": ["boolean", "null"], "default": false},
+    {"name": "staff", "type": ["boolean", "null"], "default": false},
+    {"name": "alliance", "type": ["null", "string"], "default": null}
+  ]
+}

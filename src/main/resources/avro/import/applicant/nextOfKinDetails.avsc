@@ -1,0 +1,14 @@
+{
+    "namespace": "za.co.absa.avaf.schema.application",
+    "name": "NextOfKinDetails",
+    "type": "record",
+    "doc": "Next of kin details",
+    "fields": [
+           {"name": "fullName", "type": ["null", "string"], "default": null},
+           {"name": "surname", "type": ["null", "string"], "default": null},
+           {"name": "cellPhoneNumber", "type": ["null", "string"], "default": null},
+           {"name": "homePhoneNumber", "type": ["null", "string"], "default": null},
+           {"name": "workPhoneNumber", "type": ["null", "string"], "default": null},
+           {"name": "relationship", "type": ["null", "string"], "default": null}
+       ]
+}

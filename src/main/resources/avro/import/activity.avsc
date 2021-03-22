@@ -1,0 +1,39 @@
+{
+    "namespace": "za.co.absa.avaf.schema.deal",
+    "name": "Activity",
+    "type": "record",
+    "doc": "Deal Activity log",
+    "fields": [
+        {"name": "timestamp", "type": "long", "logicalType": "timestamp-millis"},
+        {"name": "domain", "type": ["null", "string"], "default": null},
+        {"name": "actor", "type": ["null", "string"], "default": null},
+        {"name": "action", "type": ["null", {
+               "type": "record",
+               "namespace": "za.co.absa.avaf.schema.deal",
+               "name": "DealAction",
+               "doc": "Deal action",
+               "fields" : [
+                  {"name": "description", "type": ["null", "string"], "default": null},
+                  {"name": "result", "type": ["null", "string"], "default": null},
+                  {"name": "resultReason", "type": ["null", "string"], "default": null},
+                  {"name": "completed", "type": ["null", "boolean"], "default": null},
+                  {"name": "feedback", "type": ["null", "string"], "default": null},
+                  {"name": "statusInformation", "type": ["null", "string"], "default": null},
+                  {"name": "internalUserComments", "type": ["null", "string"], "default": null}
+               ]
+           }], "default": null},
+        {"name": "dealDocuments", "type": {"type": "array", "doc": "Deal documents",
+            "items": "za.co.absa.avaf.schema.deal.DealDocuments"
+            }, "default": []},
+        {"name": "checkList", "type": {"type": "array",  "doc": "Check List",
+            "items": {
+                "name": "CheckList", "type": "record",
+                "fields" : [
+                          {"name": "name", "type": ["null", "string"], "default": null},
+                          {"name": "checked", "type": ["null", "boolean"], "default": null}
+                      ]
+                 }
+             },  "default": []},
+        {"name": "metaData", "type": ["null", {"type" :"map", "values": ["null", "string"]}], "default": null}
+    ]
+}

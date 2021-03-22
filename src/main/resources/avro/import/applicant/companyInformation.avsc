@@ -1,0 +1,10 @@
+{
+    "namespace": "za.co.absa.avaf.schema.application",
+    "name": "CompanyInformation",
+    "type": "record",
+    "doc": "Primary applicant employment details",
+    "fields": [
+          {"name": "sectorIndustryCode", "type": ["null", "string"], "default": null},
+          {"name": "companyYearEnd", "type": ["null", "string"], "default": null}
+    ]
+}

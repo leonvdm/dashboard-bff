@@ -1,0 +1,13 @@
+ {
+    "namespace": "za.co.absa.avaf.schema.application",
+    "name": "NegotiatedRates",
+    "type": "record",
+    "doc": "NegotiatedRates",
+      "fields" : [
+             {"name": "rateType", "type": ["null", "string"], "default": null},
+             {"name": "rate", "type": ["null", "string"], "default": null},
+             {"name": "dic", "type": ["null", "string"], "default": null},
+             {"name": "instalment", "type": ["null", "string"], "default": null},
+             {"name": "interimInterest", "type": ["null", "string"], "default": null}
+      ]
+ }

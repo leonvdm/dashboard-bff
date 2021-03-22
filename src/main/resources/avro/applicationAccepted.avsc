@@ -1,0 +1,14 @@
+{
+  "namespace": "za.co.absa.avaf.schema.application",
+  "type": "record",
+  "name": "ApplicationAccepted",
+  "_topic": "global.avaf.za.application-accepted.dev.func",
+  "fields": [
+    {"name": "receivedDateTime", "aliases": ["classifiedOnDate"], "type": ["null", "string"], "default": null, "doc": "DateTimeFormatter.ISO_DATE_TIME e.g. '2011-12-03T10:15:30'"},
+    {"name": "applicationNumber", "type": ["null", "string"], "default": null},
+    {"name": "bussOriginatorRefNo", "type": ["null", "string"], "default": null},
+    {"name": "businessReferenceNumber", "type": ["null", "string"], "default": null},
+    {"name": "version",  "type": ["null", "int"], "default": null},
+    {"name": "application", "type": ["null", "za.co.absa.avaf.schema.application.ApplicationData"], "default": null}
+  ]
+}

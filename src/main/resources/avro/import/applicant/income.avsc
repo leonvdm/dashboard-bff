@@ -1,0 +1,19 @@
+{
+    "namespace": "za.co.absa.avaf.schema.application",
+    "name": "Income",
+    "type": "record",
+    "doc": "Applicant Income",
+    "fields": [
+         {"name": "grossRenumeration", "type": ["null", "string"], "default": null, "doc": "Gross Renumeration as per Payslip"},
+         {"name": "commission", "type": ["null", "string"], "default": null, "doc": "Monthly Commission Included in Gross"},
+         {"name": "carAllowance", "type": ["null", "string"], "default": null, "doc": "Car Allowance Included in Gross"},
+         {"name": "otherIncome", "type": ["null", "string"], "default": null, "doc" : "Income other than Salary/Wages excluded in Gross"},
+         {"name": "maintenanceIncome", "type": ["null", "string"], "default": null, "doc" : "Alimony/ Maintenance / Support excluded in Gross"},
+         {"name": "rentalIncome", "type": ["null", "string"], "default": null, "doc": "Rental Income excluded in Gross"},
+         {"name": "totalMonthlyIncome", "type": ["null", "string"], "default": null, "doc" : "Total Monthly Income ( before deductions)"},
+         {"name": "monthlySalary", "type": ["null", "string"], "default": null,  "doc": "Monthly salary as shown on Payslip"},
+         {"name": "salaryDeduction", "type": ["null", "string"], "default": null,  "doc": "Deductions like Taxes, Medical etc from Gross Renumeration"},
+         {"name": "netPay", "type": ["null", "string"], "default": null, "doc": "Net pay as shown on Payslip"},
+         {"name": "netIncome", "type": ["null", "string"], "default": null, "doc" : "Total Income after deductions (Net Pay + Maintenance + Rental + Extra)"}
+    ]
+}

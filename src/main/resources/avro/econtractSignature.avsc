@@ -1,0 +1,10 @@
+{
+  "namespace": "za.co.absa.avaf.schema.application",
+  "type": "record",
+  "name": "EContractSignature",
+  "fields": [
+    {"name": "bussOriginatorRefNo", "type": ["null", "string"], "default": null},
+    {"name": "businessReferenceNumber", "type": ["null", "string"], "default": null},
+    {"name": "creditMarketingConsent", "type": ["null", "za.co.absa.avaf.schema.contract.CreditMarketingConsent"], "default": null}
+  ]
+}

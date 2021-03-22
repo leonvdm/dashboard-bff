@@ -1,0 +1,31 @@
+{
+  "namespace": "za.co.absa.avaf.schema.contract",
+  "type": "record",
+  "name": "ContractAccepted",
+  "fields": [
+    {"name": "bussOriginatorRefNo", "type": ["null", "string"], "default": null},
+    {"name": "businessReferenceNumber", "type": ["null", "string"], "default": null},
+    {"name": "customer", "type": ["null", "string"], "default": null},
+    {"name": "version", "type": ["null", "string"], "default": null},
+    {"name": "newBankFinAccNo", "type": ["null", "string"], "default": null},
+    {"name": "manualContractIndicator", "type": ["boolean", "null"], "default": false},
+    {"name": "creditMarketingConsent", "type": ["null", "za.co.absa.avaf.schema.contract.CreditMarketingConsent"], "default": null},
+    {"name": "mergedContractDocument", "type": ["null", "za.co.absa.avaf.schema.deal.DealDocuments"], "default": null},
+    {"name": "signedContractDocuments",
+     "type": ["null",
+     {
+       "type": "array",
+       "items": "za.co.absa.avaf.schema.deal.DealDocuments",
+       "default": []
+     }], "default": null
+    },
+    {"name": "eventLog",
+      "type": ["null",
+        {
+          "type": "array",
+          "items": "za.co.absa.avaf.schema.deal.Activity",
+          "default": []
+        }], "default": null
+    }
+  ]
+}

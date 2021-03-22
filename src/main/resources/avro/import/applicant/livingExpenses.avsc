@@ -1,0 +1,26 @@
+{
+    "namespace": "za.co.absa.avaf.schema.application",
+    "name": "LivingExpenses",
+    "type": "record",
+    "doc": "Applicant Living Expenses",
+    "fields": [
+         {"name": "totalLivingExpenses", "type": ["null", "string"], "default": null},
+         {"name": "waterLights", "type": ["null", "string"], "default": null},
+         {"name": "household", "type": ["null", "string"], "default": null},
+         {"name": "telephone", "type": ["null", "string"], "default": null},
+         {"name": "transport", "type": ["null", "string"], "default": null},
+         {"name": "foodEntertainment", "type": ["null", "string"], "default": null},
+         {"name": "education", "type": ["null", "string"], "default": null},
+         {"name": "maintenance", "type": ["null", "string"], "default": null},
+         {"name": "insurance", "type": ["null", "string"], "default": null},
+         {"name": "security", "type": ["null", "string"], "default": null},
+         {"name": "totalOtherExpenses", "type": ["null", "string"], "default": null},
+         {"name": "otherExpenses", "type": ["null",
+               {
+                   "type": "array",
+                   "items": ["null", "za.co.absa.avaf.schema.application.OtherExpense"],
+                   "default": []
+                }], "default": null
+           }
+    ]
+}

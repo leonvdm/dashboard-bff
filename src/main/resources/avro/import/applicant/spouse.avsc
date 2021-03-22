@@ -1,0 +1,19 @@
+{
+    "namespace": "za.co.absa.avaf.schema.application",
+    "name": "Spouse",
+    "type": "record",
+    "doc": "Spouse or Partner",
+    "fields": [
+          {"name": "type", "type": ["null", "string"], "default": null, "doc": "e.g. SPOUSE, OTHER"},
+          {"name": "title", "type": ["null", "string"], "default": null},
+          {"name": "fullName", "type": ["null", "string"], "default": null},
+          {"name": "surname", "type": ["null", "string"], "default": null},
+          {"name": "employerName", "type": ["null", "string"], "default": null},
+          {"name": "homePhoneNumber", "type": ["null", "string"], "default": null},
+          {"name": "workPhoneNumber", "type": ["null", "string"], "default": null},
+          {"name": "cellPhoneNumber", "type": ["null", "string"], "default": null},
+          {"name": "emailAddress", "type": ["null", "string"], "default": null},
+          {"name": "occupation", "type": ["null", "string"], "default": null},
+          {"name": "financialProfile", "type": ["null", "za.co.absa.avaf.schema.application.FinancialProfile"], "default": null}
+    ]
+}

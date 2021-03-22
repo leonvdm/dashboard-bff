@@ -1,0 +1,18 @@
+{
+    "namespace": "za.co.absa.avaf.schema.application",
+    "name": "ApplicationData",
+    "type": "record",
+    "doc": "Application for vehicle/asset finance",
+    "fields": [
+         {"name": "channel", "type": ["null", "string"], "default": null},
+         {"name": "sourceSystem", "type": ["null", "string"], "default": null},
+         {"name": "applicationType", "type": "string", "default": "Standard"},
+         {"name": "dealType", "type": "string", "default": "PSD"},
+         {"name": "clientType", "type": ["null", "string"], "default": null},
+         {"name": "tradingSubCompanyCode", "type": ["null", "string"], "default": null},
+         {"name": "financeRequest", "type": ["null", "za.co.absa.avaf.schema.application.FinanceRequest"], "default": null},
+         {"name": "dealer", "type": ["null", "za.co.absa.avaf.schema.referencedata.Dealer"], "default": null},
+         {"name": "applicant", "type": ["null", "za.co.absa.avaf.schema.application.Applicant"], "default": null},
+         {"name": "dealAttributes", "type": ["null", "za.co.absa.avaf.schema.application.DealAttributes"], "default": null}
+    ]
+}

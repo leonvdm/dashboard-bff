@@ -1,0 +1,13 @@
+{
+    "namespace": "za.co.absa.avaf.schema.application",
+    "name": "BankingDetails",
+    "type": "record",
+    "doc": "Banking details",
+    "fields": [
+        {"name": "currentBankName", "type": ["null", "string"], "default": null},
+        {"name": "currentBankBranch", "type": ["null", "string"], "default": null},
+        {"name": "currentBranchCode", "type": ["null", "string"], "default": null},
+        {"name": "currentBankAccType", "type": ["null", "string"], "default": null},
+        {"name": "currentBankAccNo", "type": ["null", "string"], "default": null}
+    ]
+}

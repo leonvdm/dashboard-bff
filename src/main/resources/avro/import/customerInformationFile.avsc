@@ -1,0 +1,13 @@
+{
+    "namespace": "za.co.absa.avaf.schema.application",
+    "name": "CustomerInformationFile",
+    "type": "record",
+    "doc": "Customer information file of applicant",
+    "fields": [
+        {"name": "clientCode", "type": ["null", "string"], "default": null},
+        {"name": "dateAvafAccountOpened", "type": ["null", "string"], "default": null, "doc": "DateTimeFormatter.BASIC_ISO_DATE e.g. '20111203'"},
+        {"name": "segmentIndicator", "type": ["null", "string"], "default": null},
+        {"name": "repeatAvafCustomerIndicator", "type": ["null", "string"], "default": null},
+        {"name": "existingAvafCustomerIndicator", "type": ["null", "string"], "default": null}
+    ]
+}

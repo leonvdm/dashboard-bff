@@ -1,0 +1,15 @@
+{
+    "namespace": "za.co.absa.avaf.schema.application.fraud",
+    "name": "FraudScreening",
+    "type": "record",
+    "doc": "Fraud results for applicant",
+    "fields": [
+        {"name": "source", "type": ["null", "string"], "default": null},
+        {"name": "referral", "type": ["null", "boolean"], "default": null, "doc": "@Deprecated"},
+        {"name": "fraudIndicator", "type": ["null", "string"], "default": null},
+        {"name": "fraudActionTaken", "type": ["null", "string"], "default": null, "doc": "@Deprecated"},
+        {"name": "podiumComment", "type": ["null", "string"], "default": null},
+        {"name": "error", "type": ["null", "string"], "default": null},
+        {"name": "documentsRequired", "type" : ["null", {"type": "array", "items": "string"}], "default": null}
+    ]
+}

@@ -1,0 +1,12 @@
+{
+    "namespace": "za.co.absa.avaf.schema.application",
+    "name": "ContactInformation",
+    "type": "record",
+    "doc": "Contact information, e.g. phone numbers and email addresses",
+    "fields": [
+        {"name": "cellPhoneNumber", "type": ["null", "string"], "default": null},
+        {"name": "homePhoneNumber", "type": ["null", "string"], "default": null},
+        {"name": "workPhoneNumber", "type": ["null", "string"], "default": null},
+        {"name": "emailAddress", "type": ["null", "string"], "default": null}
+    ]
+}

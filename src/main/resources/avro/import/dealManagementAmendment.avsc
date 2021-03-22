@@ -1,0 +1,310 @@
+{
+  "namespace": "za.co.absa.avaf.dealmanagement.schema.domain",
+  "name": "DealManagementAmendment",
+  "type": "record",
+  "fields": [
+    {"name": "applicationDate", "type": ["null", "string"], "default": null},
+    {"name": "applicationNumber", "type": ["null", "string"], "default": null},
+    {"name": "businessReferenceNumber", "type": ["null", "string"], "default": null},
+    {"name": "businessOriginatorReferenceNumber", "type": ["null", "string"], "default": null},
+    {"name" : "applicantDetails",
+      "type" : ["null", {
+        "type" : "record",
+        "name" : "ApplicantDetails",
+        "fields" : [
+          {"name": "title", "type": ["null", "string"], "default": null},
+          {"name": "firstNames", "type": ["null", "string"], "default": null},
+          {"name": "surname", "type": ["null", "string"], "default": null},
+          {"name": "identityType", "type": ["null", "string"], "default": null},
+          {"name": "identificationNumber", "type": ["null", "string"], "default": null},
+          {"name": "dateOfBirth", "type": ["null", "string"], "default": null},
+          {"name": "gender", "type": ["null", "string"], "default": null},
+          {"name": "race", "type": ["null", "string"], "default": null},
+          {"name": "nationality", "type": ["null", "string"], "default": null},
+          {"name": "countryOfOrigin", "type": ["null", "string"], "default": null},
+          {"name": "countryOfResidence", "type": ["null", "string"], "default": null},
+          {"name": "countryOfIssue", "type": ["null", "string"], "default": null},
+          {"name": "maritalStatus", "type": ["null", "string"], "default": null},
+          {"name": "preferredLanguage", "type": ["null", "string"], "default": null},
+          {"name": "absaProfileClientType", "type": ["null", "string"], "default": null},
+          {"name": "absaProfileNumber", "type": ["null", "string"], "default": null},
+          {"name": "contactCellNumber", "type": ["null", "string"], "default": null},
+          {"name": "contactHomeNumber", "type": ["null", "string"], "default": null},
+          {"name": "contactWorkNumber", "type": ["null", "string"], "default": null},
+          {"name": "contactEmailAddress", "type": ["null", "string"], "default": null},
+          {"name": "nextOfKinTitle", "type": ["null", "string"], "default": null},
+          {"name": "nextOfKinFirstNames", "type": ["null", "string"], "default": null},
+          {"name": "nextOfKinSurname", "type": ["null", "string"], "default": null},
+          {"name": "nextOfKinRelationship", "type": ["null", "string"], "default": null},
+          {"name": "nextOfKinCellNumber", "type": ["null", "string"], "default": null},
+          {"name": "nextOfKinHomeNumber", "type": ["null", "string"], "default": null},
+          {"name": "nextOfKinWorkNumber", "type": ["null", "string"], "default": null},
+          {"name" : "incomeAndAffordability",
+            "type" : ["null", {
+              "type" : "record",
+              "name" : "IncomeAndAffordability",
+              "fields" : [
+                {"name": "sourceOfIncome", "type": ["null", "string"], "default": null},
+                {"name": "sourceOfFunds1", "type": ["null", "string"], "default": null},
+                {"name": "sourceOfFunds2", "type": ["null", "string"], "default": null},
+                {"name": "sourceOfFunds3", "type": ["null", "string"], "default": null},
+                {"name": "sourceOfFunds4", "type": ["null", "string"], "default": null},
+                {"name": "sourceOfFunds5", "type": ["null", "string"], "default": null},
+                {"name": "grossIncome", "type": ["null", "string"], "default": null, "doc": "Gross Renumeration or Income as per Payslip"},
+                {"name": "commission", "type": ["null", "string"], "default": null, "doc": "Monthly Commission Included in Gross"},
+                {"name": "carAllowance", "type": ["null", "string"], "default": null, "doc": "Car Allowance Included in Gross"},
+                {"name": "otherIncome", "type": ["null", "string"], "default": null, "doc" : "Income other than Salary/Wages excluded in Gross"},
+                {"name": "maintenanceIncome", "type": ["null", "string"], "default": null, "doc" : "Alimony/ Maintenance / Support excluded in Gross"},
+                {"name": "rentalIncome", "type": ["null", "string"], "default": null, "doc": "Rental Income excluded in Gross"},
+                {"name": "totalMonthlyIncome", "type": ["null", "string"], "default": null, "doc" : "Total Monthly Income ( before deductions)"},
+                {"name": "disposableIncome", "type": ["null", "string"], "default": null},
+                {"name": "monthlySalary", "type": ["null", "string"], "default": null,  "doc": "Monthly salary as shown on Payslip"},
+                {"name": "salaryDeduction", "type": ["null", "string"], "default": null,  "doc": "Deductions like Taxes, Medical etc from Gross Renumeration"},
+                {"name": "netPay", "type": ["null", "string"], "default": null, "doc": "Net pay as shown on Payslip"},
+                {"name": "netIncome", "type": ["null", "string"], "default": null, "doc" : "Total Income after deductions (Net Pay + Maintenance + Rental + Extra)"},
+                {"name": "bondPayment", "type": ["null", "string"], "default": null},
+                {"name": "bondJoint", "type": ["null", "string"], "default": null},
+                {"name": "bondPercentage", "type": ["null", "string"], "default": null},
+                {"name": "personalLoan", "type": ["null", "string"], "default": null},
+                {"name": "creditCard", "type": ["null", "string"], "default": null},
+                {"name": "furnitureAccount", "type": ["null", "string"], "default": null},
+                {"name": "clothingAccount", "type": ["null", "string"], "default": null},
+                {"name": "overdraft", "type": ["null", "string"], "default": null},
+                {"name": "waterLights", "type": ["null", "string"], "default": null},
+                {"name": "household", "type": ["null", "string"], "default": null},
+                {"name": "telephone", "type": ["null", "string"], "default": null},
+                {"name": "transport", "type": ["null", "string"], "default": null},
+                {"name": "foodEntertainment", "type": ["null", "string"], "default": null},
+                {"name": "education", "type": ["null", "string"], "default": null},
+                {"name": "maintenance", "type": ["null", "string"], "default": null},
+                {"name": "insurance", "type": ["null", "string"], "default": null},
+                {"name": "security", "type": ["null", "string"], "default": null},
+                {"name": "totalDebtRepayments", "type": ["null", "string"], "default": null},
+                {"name": "totalVehicleInstallments", "type": ["null", "string"], "default": null},
+                {"name": "totalLivingExpenses", "type": ["null", "string"], "default": null},
+                {"name": "netEffect", "type": ["null", "string"], "default": null},
+                {"name": "rateType", "type": ["null", "string"], "default": null},
+                {"name": "applicationInstalment", "type": ["null", "string"], "default": null},
+                {"name": "otherFixedDebt", "type": ["null",
+                  {"type": "array",  "doc": "Other FixedDebt",
+                    "items": {
+                      "name": "OtherFixedDebt", "type": "record",
+                      "fields" : [
+                        {"name": "description", "type": ["null", "string"], "default": null},
+                        {"name": "amount", "type": ["null", "string"], "default": null}
+                      ]
+                    }, "default": []
+                  }], "default": null
+                },
+                {"name": "totalOtherExpenses", "type": ["null", "string"], "default": null},
+                {"name": "otherExpenses", "type": ["null",
+                  {"type": "array",  "doc": "Other Expenses",
+                    "items": {
+                      "name": "OtherExpense", "type": "record",
+                      "fields" : [
+                        {"name": "description", "type": ["null", "string"], "default": null},
+                        {"name": "amount", "type": ["null", "string"], "default": null}
+                      ]
+                    }, "default": []
+                  }], "default": null
+                },
+                {"name": "existingVehicleAccounts", "type": ["null",
+                  {"type": "array",  "doc": "Existing vehicle accounts",
+                    "items": {
+                      "name": "ExistingVehicleAccount", "type": "record",
+                      "fields" : [
+                        {"name": "instalment", "type": ["null", "string"], "default": null},
+                        {"name": "settle", "type": ["null", "string"], "default": null},
+                        {"name": "accountNumber", "type": ["null", "string"], "default": null}
+                      ]
+                    }, "default": []
+                  }], "default": null
+                }
+              ]}],
+            "default": null
+          }
+        ]}],
+      "default": null
+    },
+    {"name" : "addresses",
+      "type" : ["null", {
+        "type" : "record",
+        "name" : "Addresses",
+        "fields" : [
+          {"name": "resAddressLine1", "type": ["null", "string"], "default": null},
+          {"name": "resAddressLine2", "type": ["null", "string"], "default": null},
+          {"name": "resAddressLine3", "type": ["null", "string"], "default": null},
+          {"name": "resAddressSuburb", "type": ["null", "string"], "default": null},
+          {"name": "resAddressCity", "type": ["null", "string"], "default": null},
+          {"name": "resAddressCode", "type": ["null", "string"], "default": null},
+          {"name": "resAddressStatus", "type": ["null", "string"], "default": null},
+          {"name": "resAddressOccupationPeriod", "type": ["null", "string"], "default": null},
+          {"name": "postalAddressLine1", "type": ["null", "string"], "default": null},
+          {"name": "postalAddressLine2", "type": ["null", "string"], "default": null},
+          {"name": "postalAddressLine3", "type": ["null", "string"], "default": null},
+          {"name": "postalAddressSuburb", "type": ["null", "string"], "default": null},
+          {"name": "postalAddressCity", "type": ["null", "string"], "default": null},
+          {"name": "postalAddressCode", "type": ["null", "string"], "default": null}
+        ]}],
+      "default": null
+    },
+    {"name" : "employerInformation",
+      "type" : ["null", {
+        "type" : "record",
+        "name" : "EmployerInformation",
+        "fields" : [
+          {"name": "companyName", "type": ["null", "string"], "default": null},
+          {"name": "vatNumber", "type": ["null", "string"], "default": null},
+          {"name": "employmentType", "type": ["null", "string"], "default": null},
+          {"name": "occupation", "type": ["null", "string"], "default": null},
+          {"name": "employmentPeriod", "type": ["null", "string"], "default": null},
+          {"name": "industryType", "type": ["null", "string"], "default": null},
+          {"name": "sectorIndustryCode", "type": ["null", "string"], "default": null},
+          {"name": "companyYearEnd", "type": ["null", "string"], "default": null},
+          {"name": "occupationLevel", "type": ["null", "string"], "default": null},
+          {"name": "salaryDate", "type": ["null", "string"], "default": null},
+          {"name": "addressLine1", "type": ["null", "string"], "default": null},
+          {"name": "addressLine2", "type": ["null", "string"], "default": null},
+          {"name": "addressLine3", "type": ["null", "string"], "default": null},
+          {"name": "addressSuburb", "type": ["null", "string"], "default": null},
+          {"name": "addressCity", "type": ["null", "string"], "default": null},
+          {"name": "addressCode", "type": ["null", "string"], "default": null},
+          {"name": "employerPhoneNumber", "type": ["null", "string"], "default": null}
+        ]}],
+      "default": null
+    },
+    {"name" : "assetDetails",
+      "type" : ["null", {
+        "type" : "record",
+        "name" : "AssetDetails",
+        "fields" : [
+          {"name": "assetType", "type": ["null", "string"], "default": null},
+          {"name": "mmCode", "type": ["null", "string"], "default": null},
+          {"name": "mileage", "type": ["null", "string"], "default": null},
+          {"name": "vinOrChassisNumber", "type": ["null", "string"], "default": null},
+          {"name": "engineNumber", "type": ["null", "string"], "default": null},
+          {"name": "engineSize", "type": ["null", "string"], "default": null},
+          {"name": "vehicleType", "type": ["null", "string"], "default": null},
+          {"name": "vehicleRegistrationNumber", "type": ["null", "string"], "default": null},
+          {"name": "extras", "type": ["null",
+            {"type": "array",  "doc": "Asset Extras",
+              "items": {
+                "name": "Extra", "type": "record",
+                "fields" : [
+                  {"name": "code", "type": ["null", "string"], "default": null},
+                  {"name": "description", "type": ["null", "string"], "default": null},
+                  {"name": "vatable", "type": "boolean", "default": false},
+                  {"name": "price", "type": ["null", "string"], "default": null}
+                ]
+              }, "default": []
+            }], "default": null
+          }
+        ]}],
+      "default": null
+    },
+    {"name": "valueAddedProducts",
+     "type": ["null",
+     {
+        "type": "array",
+        "items": ["null", "za.co.absa.avaf.schema.application.ValueAddedProduct"],
+        "default": []
+     }], "default": null
+    },
+    {"name" : "contractAndFinancials",
+      "type" : ["null", {
+        "type" : "record",
+        "name" : "ContractAndFinancials",
+        "fields" : [
+          {"name": "contractFinanceType", "type": ["null", "string"], "default": null},
+          {"name": "contractApprovedRateType", "type": ["null", "string"], "default": null},
+          {"name": "contractPaymentFrequency", "type": ["null", "string"], "default": null},
+          {"name": "contractTerm", "type": ["null", "string"], "default": null},
+          {"name": "contractStartDate", "type": ["null", "string"], "default": null},
+          {"name": "contractPaymentMethod", "type": ["null", "string"], "default": null},
+          {"name": "contractFirstPaymentDate", "type": ["null", "string"], "default": null},
+          {"name": "requestedRate", "type": ["null", "string"], "default": null},
+          {"name": "requestedRateType", "type": ["null", "string"], "default": null},
+          {"name": "fixedApproved", "type": ["null", "string"], "default": null},
+          {"name": "fixedStandardDIC", "type": ["null", "string"], "default": null},
+          {"name": "fixedExtraDIC", "type": ["null", "string"], "default": null},
+          {"name": "fixedInstalment", "type": ["null", "string"], "default": null},
+          {"name": "linkedApproved", "type": ["null", "string"], "default": null},
+          {"name": "linkedStandardDIC", "type": ["null", "string"], "default": null},
+          {"name": "linkedExtraDIC", "type": ["null", "string"], "default": null},
+          {"name": "linkedInstalment", "type": ["null", "string"], "default": null},
+          {"name": "finPurchasePrice", "type": ["null", "string"], "default": null},
+          {"name": "finDeposit", "type": ["null", "string"], "default": null},
+          {"name": "finResidualValue", "type": ["null", "string"], "default": null},
+          {"name": "initiationFeePaid", "type": ["null", "string"], "default": null}
+        ]}],
+      "default": null
+    },
+    {"name" : "bankAndPayment",
+      "type" : ["null", {
+        "type" : "record",
+        "name" : "BankAndPayment",
+        "fields" : [
+          {"name": "bankName", "type": ["null", "string"], "default": null},
+          {"name": "accountType", "type": ["null", "string"], "default": null},
+          {"name": "branchName", "type": ["null", "string"], "default": null},
+          {"name": "branchCode", "type": ["null", "string"], "default": null},
+          {"name": "accountNumber", "type": ["null", "string"], "default": null},
+          {"name": "avafAccountNumber", "type": ["null", "string"], "default": null},
+          {"name": "debitOrderFirstCollectionDate", "type": ["null", "string"], "default": null},
+          {"name": "debitOrderFrequency", "type": ["null", "string"], "default": null},
+          {"name": "debitOrderAdjustmentRuleIndicator", "type": ["null", "string"], "default": null},
+          {"name": "debitOrderDebitValueType", "type": ["null", "string"], "default": null},
+          {"name": "debitOrderAdjustmentCategory", "type": ["null", "string"], "default": null},
+          {"name": "debitOrderAdjustmentRate", "type": ["null", "string"], "default": null},
+          {"name": "debitOrderAdjustmentAmount", "type": ["null", "string"], "default": null},
+          {"name": "debitOrderTrackingIndicator", "type": ["null", "string"], "default": null},
+          {"name": "debitOrderUserCreditorName", "type": ["null", "string"], "default": null},
+          {"name": "debitOrderUserCreditorAbbreviatedName", "type": ["null", "string"], "default": null},
+          {"name": "accPayerDebtorAccountNumber", "type": ["null", "string"], "default": null},
+          {"name": "accAccountType", "type": ["null", "string"], "default": null},
+          {"name": "accBank", "type": ["null", "string"], "default": null},
+          {"name": "accBranchCode", "type": ["null", "string"], "default": null}
+        ]}],
+      "default": null
+    },
+    {"name" : "spouseOrPartner",
+      "type" : ["null", {
+        "type" : "record",
+        "name" : "SpouseOrPartner",
+        "fields" : [
+          {"name": "title", "type": ["null", "string"], "default": null},
+          {"name": "firstNames", "type": ["null", "string"], "default": null},
+          {"name": "surname", "type": ["null", "string"], "default": null},
+          {"name": "employerName", "type": ["null", "string"], "default": null},
+          {"name": "contactCellNumber", "type": ["null", "string"], "default": null},
+          {"name": "contactHomeNumber", "type": ["null", "string"], "default": null},
+          {"name": "contactWorkNumber", "type": ["null", "string"], "default": null},
+          {"name": "contactEmailAddress", "type": ["null", "string"], "default": null},
+          {"name": "incomeAndAffordability", "type": ["null", "za.co.absa.avaf.dealmanagement.schema.domain.IncomeAndAffordability"], "default": null, "doc": "IncomeAndAffordability"}
+        ]}],
+      "default": null
+    },
+    {"name" : "preferences",
+      "type" : ["null", {
+        "type" : "record",
+        "name" : "Preferences",
+        "fields" : [
+          {"name": "electronicMarketingConsent", "type": ["null", "string"], "default": null},
+          {"name": "electronicMarketingEmail", "type": ["null", "string"], "default": null},
+          {"name": "electronicMarketingSms", "type": ["null", "string"], "default": null},
+          {"name": "electronicMarketingVoiceRecording", "type": ["null", "string"], "default": null},
+          {"name": "creditMarketingConsent", "type": ["null", "string"], "default": null},
+          {"name": "creditMarketingEmail", "type": ["null", "string"], "default": null},
+          {"name": "creditMarketingSms", "type": ["null", "string"], "default": null},
+          {"name": "creditMarketingTelephone", "type": ["null", "string"], "default": null},
+          {"name": "section129Notification", "type": ["null", "string"], "default": null},
+          {"name": "statementDeliveryMethod", "type": ["null", "string"], "default": null},
+          {"name": "statementDeliveryEmailAddress", "type": ["null", "string"], "default": null},
+          {"name": "communicationLanguage", "type": ["null", "string"], "default": null},
+          {"name": "requestBankStatements", "type": ["null", "string"], "default": null},
+          {"name": "processPersonalInformation", "type": ["null", "string"], "default": null}
+        ]}],
+      "default": null
+    }
+  ]
+}

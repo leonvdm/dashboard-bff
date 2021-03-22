@@ -1,0 +1,12 @@
+{
+  "namespace": "za.co.absa.avaf.schema.application",
+  "name": "Referral",
+  "type": "record",
+  "doc": "Referral Instructions",
+  "fields": [
+    {"name": "type", "type": ["null", "string"], "default": null},
+    {"name": "actor", "type": ["null", "za.co.absa.avaf.schema.application.Actor"], "default": null},
+    {"name": "reason", "type": ["null", "string"], "default": null},
+    {"name": "userComments", "type": ["null", "string"], "default": null}
+  ]
+}

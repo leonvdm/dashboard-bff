@@ -1,0 +1,9 @@
+{
+    "namespace": "za.co.absa.avaf.schema.application",
+    "name": "OtherDebt",
+    "type": "record",
+    "doc": "Specify additional expenses",
+    "fields": [
+        {"name": "other", "type": ["null", "string"], "default": null}
+    ]
+}

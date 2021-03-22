@@ -1,0 +1,28 @@
+{
+  "namespace": "za.co.absa.avaf.schema.payout",
+  "type": "record",
+  "name": "RemittanceProcessed",
+  "_topic": "global.avaf.schema.payout.processed.raw.t",
+  "doc": "This is from payout once remittance received from SAP has been processed",
+  "fields": [
+    {"name": "bussOriginatorRefNo", "type": ["null", "string"], "default": null},
+    {"name": "businessReferenceNumber", "type": ["null", "string"], "default": null},
+    {"name": "remittance", "type": ["null", "za.co.absa.avaf.schema.payout.Remittance"], "default": null},
+    {"name": "remittanceDocuments",
+     "type": ["null",
+     {
+       "type": "array",
+       "items": "za.co.absa.avaf.schema.deal.DealDocuments",
+       "default": []
+     }], "default": null
+    },
+    {"name": "eventLog",
+     "type": ["null",
+     {
+       "type": "array",
+       "items": "za.co.absa.avaf.schema.deal.Activity",
+       "default": []
+     }], "default": null
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+    "namespace": "za.co.absa.avaf.schema.application.risk",
+    "name": "OnboardingRiskProfile",
+    "type": "record",
+    "doc": "Onboarding Risk Profile results for applicant",
+    "fields": [
+        {"name": "allChecksComplete", "type": ["null", "boolean"], "default": null},
+        {"name": "podiumComment", "type": ["null", "string"], "default": null},
+        {"name" : "screening",
+             "type" : ["null", {
+                 "type" : "record",
+                 "name" : "Screening",
+                 "fields" : [
+                    {"name" : "status", "type" : ["null", "string"], "default" : null},
+                    {"name" : "errorMessage", "type" : ["null", "string"], "default" : null},
+                    {"name" : "casaReference", "type" : ["null", "string"], "default" : null}
+                 ]}], "default": null
+        },
+        {"name" : "antiMoneyLaundering",
+             "type" : ["null", {
+                 "type" : "record",
+                 "name" : "AntiMoneyLaundering",
+                 "fields" : [
+                    {"name" : "riskRating", "type" : ["null", "string"], "default" : null},
+                    {"name" : "errorMessage", "type" : ["null", "string"], "default" : null},
+                    {"name": "isLowRisk", "type": ["null", "boolean"], "default": null}
+                 ]}], "default": null
+        },
+        {"name" : "analystProfiling",
+             "type" : ["null", {
+                 "type" : "record",
+                 "name" : "AnalystProfiling",
+                 "fields" : [
+                    {"name" : "statusIndicator", "type" : ["null", "string"],  "default" : null},
+                    {"name" : "comments", "type" : ["null", "string"], "default" : null}
+                 ]}], "default": null
+        }
+     ]
+}

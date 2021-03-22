@@ -1,0 +1,11 @@
+{
+    "namespace": "za.co.absa.avaf.schema.referencenumbers",
+    "name": "ReferenceNumberRange",
+    "type": "record",
+    "doc": "Range of reference numbers",
+    "fields": [
+        {"name": "rangeStart", "type": ["null", "string"], "default": null},
+        {"name": "rangeEnd", "type": ["null", "string"], "default": null},
+        {"name": "numbers", "type": ["null", { "type": "array", "items": "string" }]}
+    ]
+}

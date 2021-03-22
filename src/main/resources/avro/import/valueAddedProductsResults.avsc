@@ -1,0 +1,72 @@
+{
+    "namespace": "za.co.absa.avaf.schema.application.vaps",
+    "name": "ValueAddedProductsResults",
+    "type": "record",
+    "doc": "VAPS validation results for applicant",
+    "fields": [
+        {"name": "totalWarranties", "type": ["null", "string"], "doc": "@Deprecated see FinanceResults", "default": null},
+        {"name": "totalAvafFees", "type": ["null", "string"], "doc": "@Deprecated see FinanceResults", "default": null},
+        {"name": "totalInsurances", "type": ["null", "string"], "doc": "@Deprecated see FinanceResults", "default": null},
+        {"name": "numberOfDealerWarrantyVaps", "type": ["null", "string"], "default": null},
+        {"name": "numberOfBankWarrantyVaps", "type": ["null", "string"], "default": null},
+        {"name": "numberOfExtendedCoverVaps", "type": ["null", "string"], "default": null},
+        {"name": "numberOfCreditLifeVaps", "type": ["null", "string"], "default": null},
+        {"name": "valueAddedProductOutcomes",
+        "type": {"type": "array",  "doc": "ValueAddedProduct validation outcomes",
+            "items": {
+                "name": "ValueAddedProductOutcome", "type": "record",
+                "fields" : [
+                          {"name": "valueAddedProductCode", "type": ["null", "string"], "default": null},
+                          {"name": "valueAddedProductDescription", "type": ["null", "string"], "default": null},
+                          {"name": "category", "type": ["null", "string"], "default": null},
+                          {"name": "premium", "type": ["null", "string"], "default": null},
+                          {"name": "monthlyInstalment", "type": ["null", "string"], "default": null},
+                          {"name": "splitPayment", "type": ["null", "boolean"], "default": null},
+                          {"name": "vendorCodeValid", "type": ["null", "boolean"], "default": null},
+                          {"name": "vendorCode", "type": ["null", "string"], "default": null},
+                          {"name": "vendorName", "type": ["null", "string"], "default": null},
+                          {"name" : "conditions",
+                            "type" : ["null",
+                              {
+                              "type" : "record",
+                              "name" : "Conditions",
+                              "doc": "VAPS Conditions inputs, fees and commission results",
+                              "fields" : [
+                                {"name": "grossPremium", "type": ["null", "string"], "default": null},
+                                {"name": "monthlyPremium", "type": ["null", "string"], "default": null},
+                                {"name": "maximumSumInsured", "type": ["null", "string"], "default": null},
+                                {"name": "avafBinderFee", "type": ["null", "string"], "default": null},
+                                {"name": "adminBinderFee", "type": ["null", "string"], "default": null},
+                                {"name": "outsourceFee", "type": ["null", "string"], "default": null},
+                                {"name": "preDeliveryInspectionFee", "type": ["null", "string"], "default": null},
+                                {"name": "intermediaryCommissionFee", "type": ["null", "string"], "default": null},
+                                {"name": "avafFees", "type": ["null", "string"], "default": null},
+                                {"name": "netPremium", "type": ["null", "string"], "default": null}
+                              ]
+                            }], "default": null
+                          },
+                          {"name" : "dealerForfeitureCommission",
+                            "type" : ["null",
+                              {
+                                "type" : "record",
+                                "name" : "DealerForfeitureCommission",
+                                "doc": "VAPS DealerForfeitureCommission results",
+                                "fields" : [
+                                  {"name": "dealerForfeitureCommissionAmount", "type": ["null", "string"], "default": null},
+                                  {"name": "maximumCommissionPercentage", "type": ["null", "string"], "default": null},
+                                  {"name": "maximumRepaymentTerm", "type": ["null", "string"], "default": null}
+                                ]
+                              }], "default": null
+                          },
+                          {"name": "alerts",
+                             "type": ["null",
+                             {
+                               "type": "array",
+                                 "items": "za.co.absa.avaf.schema.deal.Alert", "default": []
+                             }], "default": null
+                         }
+                      ]
+                 }
+             },  "default": []}
+    ]
+}

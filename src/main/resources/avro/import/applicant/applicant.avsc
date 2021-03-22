@@ -1,0 +1,38 @@
+{
+    "namespace": "za.co.absa.avaf.schema.application",
+    "name": "Applicant",
+    "type": "record",
+    "doc": "Primary person or Juristic applying for finance",
+    "fields": [
+        {"name": "title", "type": ["null", "string"], "default": null},
+        {"name": "fullName", "type": ["null", "string"], "default": null},
+        {"name": "surname", "type": ["null", "string"], "default": null},
+        {"name": "gender", "type": ["null", "string"], "default": null},
+        {"name": "race", "type": ["null", "string"], "default": null},
+        {"name": "identificationType", "type": ["null", "string"], "default": null},
+        {"name": "identificationNumber", "type": ["null", "string"], "default": null},
+        {"name": "passportExpiry", "type": ["null", "string"], "default": null},
+        {"name": "dateOfBirth", "type": ["null", "string"], "default": null, "doc": "DateTimeFormatter.BASIC_ISO_DATE e.g. '20111203'"},
+        {"name": "countryOfOrigin", "type": ["null", "string"], "default": null},
+        {"name": "countryOfResidence", "type": ["null", "string"], "default": null},
+        {"name": "countryOfIssue", "type": ["null", "string"], "default": null},
+        {"name": "nationality", "type": ["null", "string"], "default": null},
+        {"name": "languageCorrespondence", "type": ["null", "string"], "default": null},
+        {"name": "languagePreferred", "type": ["null", "string"], "default": null},
+        {"name": "maritalStatus", "type": ["null", "string"], "default": null},
+        {"name": "dateMarried", "type": ["null", "string"], "default": null, "doc": "DateTimeFormatter.BASIC_ISO_DATE e.g. '20111203'"},
+        {"name": "numberOfDependants", "type": ["null", "string"], "default": null},
+        {"name": "vatNumber", "type": ["null", "string"], "default": null},
+        {"name": "postMatricQualification", "type": ["null", "string"], "default": null},
+        {"name": "preferredCommunicationMethod", "type": ["null", "string"], "default": null},
+        {"name": "addresses", "type": ["null", "za.co.absa.avaf.schema.application.Addresses"], "default": null},
+        {"name": "contactInformation", "type": ["null", "za.co.absa.avaf.schema.application.ContactInformation"], "default": null},
+        {"name": "nextOfKinDetails", "type": ["null", "za.co.absa.avaf.schema.application.NextOfKinDetails"], "default": null},
+        {"name": "bankingDetails", "type": ["null", "za.co.absa.avaf.schema.application.BankingDetails"], "default": null},
+        {"name": "paymentDetails", "type": ["null", "za.co.absa.avaf.schema.application.BankingDetails"], "default": null},
+        {"name": "employmentInformation", "type": ["null", "za.co.absa.avaf.schema.application.EmploymentInformation"], "default": null},
+        {"name": "financialProfile", "type": ["null", "za.co.absa.avaf.schema.application.FinancialProfile"], "default": null},
+        {"name": "spouse", "type": ["null", "za.co.absa.avaf.schema.application.Spouse"], "default": null}
+
+    ]
+}

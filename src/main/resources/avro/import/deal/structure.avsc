@@ -1,0 +1,14 @@
+{
+    "namespace": "za.co.absa.avaf.schema.application",
+    "name": "Structure",
+    "type": "record",
+    "doc": "Structure deals, e.g. packages / ford options",
+    "fields": [
+            {"name": "type", "type": ["null", "string"], "default": null},
+            {"name": "timestamp", "type": ["null", "string"], "default": null},
+            {"name": "code", "type": ["null", "string"], "default": null},
+            {"name": "description", "type": ["null", "string"], "default": null},
+            {"name": "endOfTermMileage", "type": ["null", "string"], "default": null},
+            {"name": "referenceData", "type": ["null", {"type": "map", "values": ["null", "string"]}], "default": null}
+    ]
+}

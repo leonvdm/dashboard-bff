@@ -1,0 +1,33 @@
+[
+    {
+      "namespace": "za.co.absa.avaf.schema.payout",
+      "type": "record",
+      "name": "PayoutChecklistItem",
+      "fields": [
+         {"name": "checked", "type": "boolean", "default": false},
+         {"name": "feedback", "type": ["null", "string"], "default": null}
+      ]
+    },
+    {
+      "namespace": "za.co.absa.avaf.schema.payout",
+      "type": "record",
+      "name": "PayoutChecklist",
+      "fields": [
+         {"name": "contractPack", "type": ["null", "za.co.absa.avaf.schema.payout.PayoutChecklistItem"], "default": null},
+         {"name": "deliveryNote", "type": ["null", "za.co.absa.avaf.schema.payout.PayoutChecklistItem"], "default": null},
+         {"name": "dealerInvoice", "type": ["null", "za.co.absa.avaf.schema.payout.PayoutChecklistItem"], "default": null},
+         {"name": "dealerSplitInvoice", "type": ["null", "za.co.absa.avaf.schema.payout.PayoutChecklistItem"], "default": null},
+         {"name": "proofOfAddress", "type": ["null", "za.co.absa.avaf.schema.payout.PayoutChecklistItem"], "default": null},
+         {"name": "proofOfInsurance", "type": ["null", "za.co.absa.avaf.schema.payout.PayoutChecklistItem"], "default": null},
+         {"name": "certifiedId", "type": ["null", "za.co.absa.avaf.schema.payout.PayoutChecklistItem"], "default": null},
+         {"name": "certifiedDrivers", "type": ["null", "za.co.absa.avaf.schema.payout.PayoutChecklistItem"], "default": null},
+         {"name": "taxiPayoutCertificate", "type": ["null", "za.co.absa.avaf.schema.payout.PayoutChecklistItem"], "default": null},
+         {"name": "operatingLicence", "type": ["null", "za.co.absa.avaf.schema.payout.PayoutChecklistItem"], "default": null},
+         {"name": "taxiAssociationLetter", "type": ["null", "za.co.absa.avaf.schema.payout.PayoutChecklistItem"], "default": null},
+         {"name": "pdpLicence", "type": ["null", "za.co.absa.avaf.schema.payout.PayoutChecklistItem"], "default": null},
+         {"name": "natisRegistrationCertificate", "type": ["null", "za.co.absa.avaf.schema.payout.PayoutChecklistItem"], "default": null},
+         {"name": "licenceDisk", "type": ["null", "za.co.absa.avaf.schema.payout.PayoutChecklistItem"], "default": null},
+         {"name": "trackerCertificate", "type": ["null", "za.co.absa.avaf.schema.payout.PayoutChecklistItem"], "default": null}
+      ]
+    }
+]

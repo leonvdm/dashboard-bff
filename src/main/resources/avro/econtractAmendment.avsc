@@ -1,0 +1,22 @@
+{
+  "namespace": "za.co.absa.avaf.schema.application",
+  "type": "record",
+  "name": "EContractAmendment",
+  "fields": [
+    {"name": "bussOriginatorRefNo", "type": ["null", "string"], "default": null},
+    {"name": "businessReferenceNumber", "type": ["null", "string"], "default": null},
+    {"name": "version",  "type": ["null", "int"], "default": null},
+    {"name": "physicalAddress", "type": ["null", "za.co.absa.avaf.schema.application.Address"], "default": null},
+    {"name": "postalAddress", "type": ["null", "za.co.absa.avaf.schema.application.Address"], "default": null},
+    {"name": "homePhoneNumber", "type": ["null", "string"], "default": null},
+    {"name": "workPhoneNumber", "type": ["null", "string"], "default": null},
+    {"name": "cellPhoneNumber", "type": ["null", "string"], "default": null},
+    {"name": "emailAddress", "type": ["null", "string"], "default": null},
+    {"name": "communicationLanguage", "type": ["null", "string"], "default": null},
+    {"name": "statementDelivery", "type": ["null", {"type": "record",
+      "name": "StatementDelivery",
+      "fields": [
+        {"name": "method", "type": ["null", "string"], "default": null}
+      ]}], "default": null}
+  ]
+}

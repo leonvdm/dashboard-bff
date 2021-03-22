@@ -1,0 +1,12 @@
+ {
+    "namespace": "za.co.absa.avaf.schema.application",
+    "name": "RequestedRates",
+    "type": "record",
+    "doc": "RequestedRates",
+        "fields" : [
+             {"name": "rateType", "type": ["null", "string"], "default": null},
+             {"name": "rate", "type": ["null", "string"], "default": null},
+             {"name": "requestedRateInstalment", "type": ["null", "string"], "default": null},
+             {"name": "requestedRateInterimInterest", "type": ["null", "string"], "default": null}
+        ]
+}

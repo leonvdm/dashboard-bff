@@ -1,0 +1,108 @@
+{
+    "namespace": "za.co.absa.avaf.schema.application",
+    "name": "RegulatoryChecksResults",
+    "type": "record",
+    "doc": "Regulatory results for applicant",
+    "fields": [
+        {"name" : "idFicaResults",
+             "type" : ["null", {
+                 "type" : "record",
+                 "name" : "IdFicaResults",
+                 "fields" : [
+                    {"name" : "status", "type" : ["null", "string"], "default" : null},
+                    {"name" : "idValidated",  "type": ["null", "boolean"], "default": null},
+                    {"name" : "podiumComment", "type" : ["null", "string"], "default" : null},
+                    {"name" : "idValidationOutcome",
+                         "type" : ["null", {
+                             "type" : "record",
+                             "name" : "IdValidationOutcome",
+                             "fields" : [
+                                {"name" : "idMatch", "type": ["null", "boolean"], "default": null},
+                                {"name" : "namesMatch", "type": ["null", "boolean"], "default": null},
+                                {"name" : "deceased", "type": ["null", "boolean"], "default": null},
+                                {"name" : "blocked", "type": ["null", "boolean"], "default": null}
+                             ]}], "default": null
+                    },
+                    {"name" : "idSystemValidated",
+                           "type" : ["null", {
+                               "type" : "record",
+                               "name" : "IdSystemValidated",
+                               "fields" : [
+                                  {"name" : "mdmVerified", "type": ["null", "boolean"], "default": null},
+                                  {"name" : "hanisVerified", "type": ["null", "boolean"], "default": null},
+                                  {"name" : "userVerified", "type": ["null", "boolean"], "default": null}
+                               ]}], "default": null,  "doc": "@Deprecated"
+                      },
+                      {"name" : "idCertification",
+                             "type" : ["null", {
+                                 "type" : "record",
+                                 "name" : "IdCertification",
+                                 "fields" : [
+                                    {"name" : "retrievedCert", "type": ["null", "boolean"], "default": null},
+                                    {"name" : "fileName", "type" : ["null", "string"], "default" : null},
+                                    {"name" : "documentUri", "type" : ["null", "string"], "default" : null},
+                                    {"name" : "version", "type" : ["null", "string"], "default" : null}
+                                 ]}], "default": null
+                      }
+                 ]}], "default": null
+        },
+        {"name" : "addressFicaResults",
+             "type" : ["null", {
+                 "type" : "record",
+                 "name" : "AddressFicaResults",
+                 "fields" : [
+                    {"name" : "status", "type" : ["null", "string"], "default" : null},
+                    {"name" : "addressValidated", "type": ["null", "boolean"], "default": null},
+                    {"name" : "podiumComment", "type" : ["null", "string"], "default" : null},
+                    {"name" : "addressSystemValidated",
+                          "type" : ["null", {
+                              "type" : "record",
+                              "name" : "AddressSystemValidated",
+                              "fields" : [
+                                 {"name" : "mdmVerified", "type": ["null", "boolean"], "default": null},
+                                 {"name" : "cpbVerified", "type": ["null", "boolean"], "default": null},
+                                 {"name" : "userVerified", "type": ["null", "boolean"], "default": null}
+                              ]}], "default": null,  "doc": "@Deprecated"
+                     },
+                     {"name" : "addressCertification",
+                           "type" : ["null", {
+                                "type" : "record",
+                                "name" : "AddressCertification",
+                                "fields" : [
+                                   {"name" : "retrievedCert", "type": ["null", "boolean"], "default": null},
+                                   {"name" : "fileName", "type" : ["null", "string"], "default" : null},
+                                   {"name" : "documentUri", "type" : ["null", "string"], "default" : null},
+                                   {"name" : "version", "type" : ["null", "string"], "default" : null}
+                               ]}], "default": null
+                      }
+                ]}], "default": null
+       },
+        {"name" : "driversLicenseResults",
+             "type" : ["null", {
+                 "type" : "record",
+                 "name" : "DriversLicenseResults",
+                 "fields" : [
+                    {"name" : "status", "type" : ["null", "string"], "default" : null},
+                    {"name" : "driversLicenseValidated", "type": ["null", "boolean"], "default": null},
+                    {"name" : "podiumComment", "type" : ["null", "string"], "default" : null},
+                    {"name" : "driversLicenseNumber", "type": ["null", "string"], "default": null},
+                    {"name" : "dateOfFirstIssue", "type" : ["null", "string"],  "default" : null},
+                    {"name" : "validTo", "type" : ["null", "string"], "default" : null},
+                    {"name": "driversLicenses",
+                         "type": ["null",
+                         {
+                           "type": "array",
+                            "items":{
+                               "name":"DriversLicense", "type":"record",
+                               "fields":[
+                                   {"name" : "description", "type": ["null", "string"], "default": null},
+                                   {"name" : "code", "type": ["null", "string"], "default": null},
+                                   {"name" : "dateOfFirstIssue", "type" : ["null", "string"],  "default" : null}
+                               ]
+                           }, "default": []
+                         }], "default": null
+                     }
+                 ]}], "default": null
+        }
+    ]
+}

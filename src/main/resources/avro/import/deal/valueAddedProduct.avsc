@@ -1,0 +1,12 @@
+{
+    "namespace": "za.co.absa.avaf.schema.application",
+    "name": "ValueAddedProduct",
+    "type": "record",
+    "doc": "Value added banking product, e.g. insurance",
+    "fields": [
+        {"name": "code", "type": ["null", "string"], "default": null},
+        {"name": "vendor", "type": ["null", "string"], "default": null},
+        {"name": "premium", "type": ["null", "string"], "default": null},
+        {"name": "isDynamic", "type": "string", "default": "No"}
+    ]
+}

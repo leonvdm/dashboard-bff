@@ -1,0 +1,11 @@
+[
+    {
+      "namespace": "za.co.absa.avaf.schema.payout",
+      "type": "record",
+      "name": "PayoutResult",
+      "fields": [
+         {"name": "success", "type": "boolean", "default": false},
+         {"name": "errors", "type": ["null", { "type": "array", "items": "string" }]}
+      ]
+    }
+]

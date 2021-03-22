@@ -1,0 +1,11 @@
+{
+    "namespace": "za.co.absa.avaf.schema.deal",
+    "name": "DealDocuments",
+    "type": "record",
+    "fields": [
+        {"name": "name", "type": ["null", "string"], "default": null},
+        {"name": "description", "type": ["null", "string"], "default": null},
+        {"name": "version", "type": ["null", "string"], "default": null},
+        {"name": "s3Key", "type": ["null", "string"], "default": null}
+    ]
+}

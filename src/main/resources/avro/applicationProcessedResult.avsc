@@ -1,0 +1,46 @@
+{
+  "namespace": "za.co.absa.avaf.schema.application",
+  "type": "record",
+  "name": "ApplicationProcessedResult",
+  "_topic": "global.avaf.schema.classifier.application.raw.t",
+  "fields": [
+    {"name": "receivedDateTime", "aliases": ["classifiedOnDate"], "type": ["null", "string"], "default": null, "doc": "DateTimeFormatter.ISO_DATE_TIME e.g. '2011-12-03T10:15:30'"},
+    {"name": "bussOriginatorRefNo", "type": ["null", "string"], "default": null},
+    {"name": "businessReferenceNumber", "type": ["null", "string"], "default": null},
+    {"name": "podiumOutcome", "type": ["null", "string"], "default": null},
+    {"name": "podiumCreateDateTime", "type": ["null", "string"], "default": null, "doc": "DateTimeFormatter.ISO_DATE_TIME e.g. '2011-12-03T10:15:30'"},
+    {"name": "version",  "type": ["null", "int"], "default": null},
+    {"name": "podiumVersion",  "type": ["null", "string"], "default": null},
+    {"name": "dealStage", "type": ["null", "string"], "default": null},
+    {"name": "dealStatus", "type": ["null", "string"], "default": null},
+    {"name": "terminationReason", "type": ["null", "string"], "default": null},
+    {"name": "applicationDate", "type": ["null", "string"], "default": null},
+    {"name": "applicationNumber", "type": ["null", "string"], "default": null},
+    {"name": "contractNumber", "type": ["null", "string"], "default": null},
+    {"name": "contractReadyIndicator", "type": ["null", "boolean"], "default": null},
+    {"name": "manualContractIndicator", "type": ["null", "boolean"], "default": null, "doc": "@Deprecated"},
+    {"name": "contractSignedMethod", "type": ["null", "string"], "default": null},
+    {"name": "communicationUpdateIndicator", "type": ["boolean", "null"], "default": false, "doc": "@Deprecated"},
+    {"name": "podiumDocument", "type": ["null", "za.co.absa.avaf.schema.deal.DealDocuments"], "default": null},
+    {"name": "payoutChecklist", "type": ["null", "za.co.absa.avaf.schema.payout.PayoutChecklist"], "default": null},
+    {"name": "application", "type": ["null", "za.co.absa.avaf.schema.application.ApplicationData"], "default": null},
+    {"name": "regulatoryChecksResults", "type": ["null", "za.co.absa.avaf.schema.application.RegulatoryChecksResults"], "default": null},
+    {"name": "onboardingRiskProfile", "type": ["null", "za.co.absa.avaf.schema.application.risk.OnboardingRiskProfile"], "default": null},
+    {"name": "fraudScreening", "type": ["null", "za.co.absa.avaf.schema.application.fraud.FraudScreening"], "default": null},
+    {"name": "valueAddedProductsResults", "type": ["null", "za.co.absa.avaf.schema.application.vaps.ValueAddedProductsResults"], "default": null},
+    {"name": "financeResults", "type": ["null", "za.co.absa.avaf.schema.application.FinanceResults"], "default": null},
+    {"name": "scoreResults", "type": ["null", "za.co.absa.avaf.schema.application.ScoreResults"], "default": null},
+    {"name": "customerInformationFile", "type": ["null", "za.co.absa.avaf.schema.application.CustomerInformationFile"], "default": null},
+    {"name": "easyAmendDetails", "type": ["null", "za.co.absa.avaf.schema.application.EasyAmendDetails"], "default": null},
+    {"name": "referral", "type": ["null", "za.co.absa.avaf.schema.application.Referral"], "default": null, "doc": "@Deprecated"},
+    {"name": "payoutResult", "type": ["null", "za.co.absa.avaf.schema.payout.PayoutResult"], "default": null},
+    {"name": "eventLog",
+     "type": ["null",
+     {
+       "type": "array",
+       "items": "za.co.absa.avaf.schema.deal.Activity",
+       "default": []
+     }], "default": null
+    }
+  ]
+}

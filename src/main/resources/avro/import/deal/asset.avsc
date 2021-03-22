@@ -1,0 +1,37 @@
+{
+    "namespace": "za.co.absa.avaf.schema.application",
+    "name": "Asset",
+    "type": "record",
+    "doc": "The vehicle/asset to be financed",
+    "fields": [
+        {"name": "type", "type": ["null", "string"], "default": null, "doc": "e.g. Motor Vehicle"},
+        {"name": "vehicleType", "type": ["null", "string"], "default": null, "doc": "e.g. Motor Vehicle"},
+        {"name": "articleType", "type": ["null", "string"], "default": null, "doc": "e.g. NEW / USED / OLD"},
+        {"name": "equipmentDescription", "type": ["null", "string"], "default": null},
+        {"name": "tcmCode", "type": ["null", "string"], "default": null},
+        {"name": "mmCode", "type": ["null", "string"], "default": null},
+        {"name": "make", "type": ["null", "string"], "default": null},
+        {"name": "model", "type": ["null", "string"], "default": null},
+        {"name": "numberOfSeats", "type": ["null", "string"], "default": null},
+        {"name": "mileage", "type": ["null", "string"], "default": null},
+        {"name": "engineSize", "type": ["null", "string"], "default": null},
+        {"name": "engineNumber", "type": ["null", "string"], "default": null},
+        {"name": "chassisNumber", "type": ["null", "string"], "default": null},
+        {"name": "registrationNumber", "type": ["null", "string"], "default": null},
+        {"name": "registrationYear", "type": ["null", "string"], "default": null},
+        {"name": "dateOfFirstRegistration", "type": ["null", "string"], "default": null},
+        {"name": "serialNumber", "type": ["null", "string"], "default": null},
+        {"name": "totalExtras", "type": ["null", "string"], "default": null},
+        {"name": "newPrice",  "type": "string", "default": "0.00", "doc": "populated from M&M data"},
+        {"name": "retailPrice",  "type": "string", "default": "0.00", "doc": "populated from M&M data"},
+        {"name": "tradePrice",  "type": "string", "default": "0.00", "doc": "populated from M&M data"},
+        {"name": "extras",
+            "type": ["null",
+                {
+                    "type": "array",
+                    "items": ["null", "za.co.absa.avaf.schema.application.ExtraItem"],
+                    "default": []
+                }], "default": null
+        }
+    ]
+}

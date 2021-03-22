@@ -1,0 +1,21 @@
+{
+  "namespace": "za.co.absa.avaf.dealmanagement.schema.domain",
+  "name": "DealActionResult",
+  "type": "record",
+  "doc": "Outcomes of Deal Management Actions",
+  "fields": [
+    {"name": "bussOriginatorRefNo", "type": ["null", "string"], "default": null},
+    {"name": "businessReferenceNumber", "type": ["null", "string"], "default": null},
+    {"name": "currentVersion", "type": ["null", "int"], "default": null},
+    {"name": "manualActions",
+      "type": ["null",
+        {
+          "type": "array",
+          "items": "za.co.absa.avaf.dealmanagement.schema.domain.ActionItemResult",
+          "default": []
+        }], "default": null
+    },
+    {"name": "amendments", "type": ["null", "za.co.absa.avaf.dealmanagement.schema.domain.DealManagementAmendment"], "default": null},
+    {"name": "creditReferralOutcome", "type": ["null", "za.co.absa.avaf.schema.application.CreditReferralOutcome"], "default": null}
+  ]
+}

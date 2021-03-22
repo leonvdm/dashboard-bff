@@ -1,0 +1,26 @@
+{
+    "namespace": "za.co.absa.avaf.schema.application",
+    "name": "Addresses",
+    "type": "record",
+    "doc": "Common address details",
+    "fields": [
+        {"name" : "residential",
+           "type" : ["null", {
+               "type" : "record",
+               "name" : "Residential",
+               "fields" : [
+                      {"name": "periodCurrentAddress", "type": ["null", "string"], "default": null, "doc": "Period at current address in months"},
+                      {"name": "residentialStatus", "type": ["null", "string"], "default": null},
+                      {"name": "address", "type": ["null", "za.co.absa.avaf.schema.application.Address"], "default": null}
+               ]}], "default": null
+        },
+        {"name" : "postal",
+            "type" : ["null", {
+                "type" : "record",
+                "name" : "Postal",
+                "fields" : [
+                      {"name": "address", "type": ["null", "za.co.absa.avaf.schema.application.Address"], "default": null}
+                ]}], "default": null
+        }
+    ]
+}

@@ -1,0 +1,56 @@
+[
+  {
+    "namespace": "za.co.absa.avaf.schema.application",
+    "type": "record",
+    "name": "Conditions",
+    "fields": [
+      {"name": "hard", "type" : {"type": "array", "items": "string"}},
+      {"name": "soft", "type" : {"type": "array", "items": "string"}}
+    ]
+  },
+  {
+    "namespace": "za.co.absa.avaf.schema.application",
+    "type": "record",
+    "name": "CounterOfferConditions",
+    "fields": [
+      {"name": "deposit", "type": ["null", "string"], "default": null},
+      {"name": "residual", "type": ["null", "string"], "default": null},
+      {"name": "term", "type": ["null", "string"], "default": null}
+    ]
+  },
+  {
+    "namespace": "za.co.absa.avaf.schema.application",
+    "type": "record",
+    "name": "CreditDecision",
+    "fields": [
+      {"name": "assessment", "type": ["null", "string"], "default": null},
+      {"name": "comments", "type": ["null", "string"], "default": null},
+      {"name": "reasons", "type" : {"type": "array", "items": "string"}},
+      {"name": "conditions", "type": ["null", "za.co.absa.avaf.schema.application.Conditions"], "default": null},
+      {"name": "counterOfferConditions", "type": ["null", {"type" :"map", "values": ["null", "string"]}], "default": null}
+    ]
+  },
+  {
+    "namespace": "za.co.absa.avaf.schema.application",
+    "type": "record",
+    "name": "CreditSanctioner",
+    "fields": [
+      {"name": "abNumber", "type": ["null", "string"], "default": null},
+      {"name": "firstName", "type": ["null", "string"], "default": null},
+      {"name": "lastName", "type": ["null", "string"], "default": null}
+    ]
+  },
+  {
+    "namespace": "za.co.absa.avaf.schema.application",
+    "type": "record",
+    "name": "CreditReferralOutcome",
+    "fields": [
+      {"name": "receivedDateTime", "aliases": ["classifiedOnDate"], "type": ["null", "string"], "default": null, "doc": "DateTimeFormatter.ISO_DATE_TIME e.g. '2011-12-03T10:15:30'"},
+      {"name": "bussOriginatorRefNo", "type": ["null", "string"], "default": null},
+      {"name": "businessReferenceNumber", "type": ["null", "string"], "default": null},
+      {"name": "scoreNumber", "type": ["null", "string"], "default": null},
+      {"name": "decision", "type": ["null", "za.co.absa.avaf.schema.application.CreditDecision"], "default": null},
+      {"name": "creditSanctioner", "type": ["null", "za.co.absa.avaf.schema.application.CreditSanctioner"], "default": null}
+    ]
+  }
+]

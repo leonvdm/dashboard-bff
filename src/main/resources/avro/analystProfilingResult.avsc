@@ -1,0 +1,11 @@
+{
+  "namespace": "za.co.absa.avaf.schema.risk",
+  "type": "record",
+  "name": "AnalystProfilingResult",
+  "fields": [
+    {"name": "casaReference", "type": ["null", "string"], "default": null},
+    {"name": "businessOriginatorReferenceNumber", "type": ["null", "string"], "default": null},
+    {"name": "comments", "type" : ["null", "string"], "default" : null},
+    {"name": "statusIndicator", "type" : ["null", "string"],  "default" : null}
+  ]
+}

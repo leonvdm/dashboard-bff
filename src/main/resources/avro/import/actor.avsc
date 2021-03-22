@@ -1,0 +1,11 @@
+{
+  "namespace": "za.co.absa.avaf.schema.application",
+  "name": "Actor",
+  "type": "record",
+  "doc": "User information",
+  "fields": [
+    {"name": "abNumber", "type": ["null", "string"], "default": null},
+    {"name": "firstName", "type": ["null", "string"], "default": null},
+    {"name": "lastName", "type": ["null", "string"], "default": null}
+  ]
+}
